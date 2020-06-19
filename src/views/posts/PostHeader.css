@@ -48,6 +48,11 @@
     margin: 20px
 }
 
+.info-specific {
+    display: flex;
+    flex-direction: row;
+}
+
 .author-img {
     border-radius: 50%;
     width: 10%;
@@ -119,6 +124,11 @@
 
     .main-content p {
         font-size: 16px;
+    }
+
+    .info-specific {
+        display: flex;
+        flex-direction: column;
     }
 }
 
