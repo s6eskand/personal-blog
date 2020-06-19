@@ -1,0 +1,46 @@
+.blogcard {
+    background: #f1f1f1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 700px;
+    min-width: 700px;
+}
+
+.blogcard-image {
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 200px;
+    min-height: 200px;
+}
+
+.blogcard-title {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.blogcard-about {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.blogcard-date {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.blogcard-profile {
+    border-radius: 50%;
+    height: 50px;
+}
+
+@media screen and (max-width: 760px) {
+    .blogcard-image {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
