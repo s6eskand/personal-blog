@@ -6,18 +6,18 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // images
 import samProfile from '../../media/images/blog_profile.png';
-import motivation from '../../media/images/motivation.png';
+import intro from '../../media/images/introduction.png';
 
 function Post1() {
         return (
             <div className="posts-container">
                 <div className="posts-header">
-                    <h1 className="posts-title">Staying Motivated During a Pandemic</h1>
+                    <h1 className="posts-title">Welcome to my Blog!</h1>
                     <div className="author-info">
                         <img className="author-img" src={samProfile} alt=""/>
                         <div className="info-text">
                             <p><b>Written by: Sam Eskandar</b></p>
-                            <p><i>June 19 2020 &bull; 5 min read</i></p>
+                            <p><i>June 19 2020 &bull; 2 min read</i></p>
                         </div>
                         <div className="social-icons">
                             <a href="https://github.com/s6eskand"><FaGithub id="github" size={30} /></a>
@@ -25,35 +25,26 @@ function Post1() {
                         </div>
                     </div>
                     <div className="main-img" >
-                        <img src={motivation} alt=""/>
+                        <img src={intro} alt=""/>
                     </div>
                     <div className="main-content">
                         <p>
-                            Life is extremely busy. We live a continuous cycle of pushing ourselves to work harder, study longer, spend more time with family and friends,
-                            and various other activities. However, a global health crisis on the scale of COVID-19 will send your fast paced lifestyle to a screeching halt. <br/>
+                            After over a month of procrastination, I have finally brought myself to make this blog! <br/>
                             <br/>
-                            So once the entire world comes to a halt, how do we find the motivation to keep pushing forward? <br/>
+                            I originally had the idea to start a technical blog because I document everything I learn.
+                            If you were to go through my Github account you would quickly see that I have a lot of tutorial
+                            projects that I use as reference for when I am building larger scale applications. So, I had the idea
+                            to share those resources. <br/>
                             <br/>
-                            Well the answer isn't as simple as it should be. Finding motivation in our day to day can already be a daunting task, and adding the fact that many of us
-                            are now stuck at home with nothing to do, does not help the situation.<br/>
+                            Every single post will be a tutorial on a way to execute a task with a specific language or framework,
+                            or just getting you set up with a specific language or framework. However, the learning doesn't stop there. <br/>
                             <br/>
+                            With every tutorial/article on this blog, will be a link to the full documented (yay commenting!) and completed project.
+                            These projects will all be in one repository on my Github account that can be found <a style={{textDecoration: 'underline'}} href="https://github.com/s6eskand/learn-with-me">here</a>. <br/>
+                            <br/>
+                            So feel free to star the repo, use it as reference, or just copy and paste some of the boilerplate code needed to complete the project. I hope that I can help as much as possible with
+                            any issues you may be facing, and thank you for reading this far :)
                         </p>
-                        <h2>1. Accepting the reality of the situation</h2>
-                        <br/>
-                        <p>
-                            We are in a pandemic. Many of us have lost jobs, summer plans, and unfortunately family and friends due to the virus. It is a stressful situation, and it is
-                            perfectly okay to do nothing sometimes. Do not under any circumstances let anyone tell you that you were never lacking time, only initiative because it is
-                            just important to be taking care of yourself as it is to be getting things done. <br/>
-                            <br/>
-                            Another thing to note is that everyone reacts differently to the situations they are put in. It may be discouraging to look at your peers and see them being
-                            productive, getting work done, and waking up before 5pm (yes, I am guilty too). However, you have to remember that you are your own person and you take your own
-                            time to recuperate, and recover. You may be someone who has taken the gift of extra time that the stay at home orders have given you from day one, or you may be like
-                            myself, who spent the first 2 weeks of the shutdown playing League of Legends for hours at a time that I am ashamed to admit. <br/>
-                            <br/>
-                            The important thing is that you are you, and nobody can rush you into getting accustomed to the new lifestyle COVID-19 has forced upon us. <br/>
-                            <br/>
-                        </p>
-                        <h2>2. Finding things you love to do</h2>
                     </div>
                 </div>
             </div>
