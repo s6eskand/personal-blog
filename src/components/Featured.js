@@ -10,17 +10,16 @@ class Featured extends React.Component {
                     <h2 style={{paddingTop: '20px'}}>My Favourite Blog Post of the Week!</h2>
                     <div style={{paddingTop: '20px', paddingLeft: '20px', paddingRight: '20px'}}>
                         <div className="featured-row">
-                            <img className="card-profile" style={{borderRadius: '50%'}} src={this.props.authorPic} alt=""/>
+                            <img className="card-profile" style={{borderRadius: '50%', width: '60px'}} src={this.props.authorPic} alt=""/>
                             <h5 style={{paddingTop: '15px', paddingLeft: '15px'}}>{this.props.author}</h5>
                         </div>
                         <h3>{this.props.title}</h3>
                         <p style={{paddingTop: '20px', paddingBottom: '20px'}}><i>{this.props.description}</i></p>
                         <div className="featured-row">
-                            <p>Read the full post </p>
-                            <FaLongArrowAltRight style={{paddingTop: '4.5px', paddingLeft: '15px'}}/>
+                            <p>Read the full post &#8594;</p>
                         </div>
                     </div>
-                    <img style={{width: '500px', height: '100%'}} src={this.props.bkgimg} alt=""/>
+                    <img style={{width: '400px', height: '100%'}} src={this.props.bkgimg} alt=""/>
                 </a>
             </div>
         )
