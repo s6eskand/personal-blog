@@ -1,0 +1,107 @@
+
+.posts-container {
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.posts-header {
+    margin-top: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.posts-title {
+    text-align: center;
+}
+
+.main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-img img {
+    width: 850px;
+    min-width: 850px;
+    max-width: 850px;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.social-icons {
+    position: absolute;
+    right: 0;
+    margin: 20px
+}
+
+.info-text {
+    margin: 20px
+}
+
+.author-img {
+    border-radius: 50%;
+    width: 10%;
+    height: 100%;
+}
+
+#github {
+    margin-right: 10px;
+}
+
+#linkedin {
+    margin-right: 10px;
+}
+
+.main-content {
+    margin-top: 50px;
+}
+
+.main-content p {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1000px ) {
+
+    .posts-header {
+        margin-top: 100px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .posts-title {
+        font-size: 30px;
+        min-width: 300px;
+    }
+
+    .posts-container {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .main-img img {
+        width: 150%;
+        min-width: 150%;
+        max-width: 150%;
+    }
+
+    .author-img {
+        border-radius: 50%;
+        width: 20%;
+        height: 100%;
+    }
+
+    .social-icons {
+        display: none;
+    }
+
+    .main-content p {
+        font-size: 16px;
+    }
+}
