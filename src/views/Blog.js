@@ -10,6 +10,7 @@ import introduction from '../media/images/introduction.png';
 import djangoUnchained from '../media/images/django_django_unchained.png';
 import reactHooks from '../media/images/react_hooks.png';
 
+// TODO add tags to previews
 class Blog extends React.Component {
     render() {
         return(
@@ -30,7 +31,7 @@ class Blog extends React.Component {
                         <Blogcard
                             image={djangoUnchained}
                             title="Building a Web Application with Django"
-                            description="Essentially the preview..."
+                            description="Because Django Unchained is about software"
                             date="June 19 2020"
                             issue="Issue #03"
                         />
@@ -39,7 +40,7 @@ class Blog extends React.Component {
                         <Blogcard
                             image={reactHooks}
                             title="An intro to React Hooks"
-                            description="Essentially the preview..."
+                            description="The closest thing to fishing React will get."
                             date="today"
                             issue="Issue #02"
                         />
@@ -48,7 +49,7 @@ class Blog extends React.Component {
                         <Blogcard
                             image={introduction}
                             title="Welcome to my Blog!"
-                            description="After over a month of procrastination, I have..."
+                            description="A quick intro into the purpose of these posts."
                             date="June 19 2020"
                             issue="Issue #01"
                         />
