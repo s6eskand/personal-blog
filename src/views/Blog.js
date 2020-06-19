@@ -6,8 +6,7 @@ import Featured from '../components/Featured';
 import Blogcard from '../components/Blogcard';
 
 // Images
-import testImage from '../media/images/codingTestImage.jpg';
-import motivation from '../media/images/motivation.png';
+import introduction from '../media/images/introduction.png';
 import djangoUnchained from '../media/images/django_django_unchained.png';
 import reactHooks from '../media/images/react_hooks.png';
 
@@ -47,10 +46,10 @@ class Blog extends React.Component {
                     </Link>
                     <Link to="/issues/1">
                         <Blogcard
-                            image={motivation}
-                            title="Staying motivated during a Pandemic"
-                            description="Essentially the preview..."
-                            date="today"
+                            image={introduction}
+                            title="Welcome to my Blog!"
+                            description="After over a month of procrastination, I have..."
+                            date="June 19 2020"
                             issue="Issue #01"
                         />
                     </Link>
