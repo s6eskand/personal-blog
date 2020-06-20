@@ -76,7 +76,8 @@
 .main-content a {
     font-family: 'Merriweather', serif;
     color: rgb(98, 132, 149);
-    font-weight: 600;
+    text-decoration: underline;
+    font-weight: 300;
     cursor: pointer;
 }
 
