@@ -47,7 +47,7 @@ function Post1() {
                             <br/>
                             <br/>
                             So feel free to star the repo, use it as reference, or just copy and paste some of the boilerplate code needed to complete the project. I hope that I can help as much as possible with
-                            any issues you may be facing, and thank you for reading this far :)
+                            any issues you may be facing, and thank you for reading this far <span role="img" aria-label="smiling emoji">&#128516;</span>
                         </p>
                     </div>
                 </div>
