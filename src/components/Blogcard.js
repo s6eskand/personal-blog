@@ -1,6 +1,7 @@
 import React from 'react';
 import profilePic from '../media/images/blog_profile.png'
 import './Blogcard.css';
+import { Button } from '@material-ui/core';
 
 class Blogcard extends React.Component{
     render() {
@@ -18,8 +19,8 @@ class Blogcard extends React.Component{
                                 </div>
                             </div>
                             <h3 className="blogcard-title">{this.props.title}</h3>
-                            <p className="blogcard-about">{this.props.description}</p>
                             <p className="blogcard-date"><i>{this.props.date}</i></p>
+                            <p className="blogcard-about">{this.props.tags.map(tag => <Button className="tag-btn" variant="outlined">{tag}</Button>)}</p>
                         </div>
                     </div>
                 </div>
