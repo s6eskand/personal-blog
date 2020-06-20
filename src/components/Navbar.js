@@ -3,6 +3,14 @@ import {Link} from 'react-router-dom';
 import './Navbar.css';
 
 class Navbar extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpen: false
+        }
+    }
+
     render() {
         return (
             <nav className="nav">
@@ -10,8 +18,8 @@ class Navbar extends React.Component {
                     <Link to="/"><h4><i>Sam Eskandar</i></h4></Link>
                 </div>
                 <ul className="nav-links">
-                    <Link to="/"><li>Issues</li></Link>
-                    <Link to="/about"><li>About</li></Link>
+                    <a href="https://sameskandar.me"><li>Website</li></a>
+                    <li>Filters</li>
                 </ul>
             </nav>
         );
