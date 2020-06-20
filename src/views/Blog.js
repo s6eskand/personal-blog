@@ -12,49 +12,58 @@ import reactHooks from '../media/images/react_hooks.png';
 
 // TODO add tags to previews
 class Blog extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            tags: [
+                'General',
+                'React',
+                'Hooks',
+                'JavaScript',
+                'Django',
+                'Python'
+            ],
+            tag1: ['general'],
+            tag2: ['React', 'Hooks', 'JavaScript'],
+            tag3: ['Django', 'Python']
+        }
+    }
+
     render() {
         return(
-            <div className="row" style={{marginBottom: '100px'}}>
-                <Featured originalPost="https://michelleangkasa.wixsite.com/michelle/post/i-learn-for-the-trees-environmental-education"
-                          authorPic="https://lh4.googleusercontent.com/-MoNlfJk8EVk/AAAAAAAAAAI/AAAAAAAAAOM/-Q_z7oEgc_I/s96-c/photo.jpg"
-                          author="Written by Michelle Angkasa"
-                          title="I Learn for the Trees: Environmental Education"
-                          description='"The complexity of Earth and its life systems can never be safely managed. What might be managed is us: human desires, economies, politics, and communities ...'
-                          bkgimg="https://static.wixstatic.com/media/ad13a6_07de3e10c7534dac88c300dd5cb34e3b~mv2.jpg/v1/fill/w_1480,h_833,al_c,q_90,usm_0.66_1.00_0.01/ad13a6_07de3e10c7534dac88c300dd5cb34e3b~mv2.webp"
-                />
-                <div className="row">
-                    <div className="container" style={{ paddingTop: '100px'}}>
-                        <h1 className="collection-title">The Full Collection of My Personal Blog Posts</h1>
-                        <hr style={{borderTop: '2px solid #b4b4b4', marginTop: '5px'}}/>
-                    </div>
-                    <Link to="/issues/3">
-                        <Blogcard
-                            image={djangoUnchained}
-                            title="Building a Web Application with Django"
-                            description="Because Django Unchained is about software"
-                            date="June 19 2020"
-                            issue="Issue #03"
-                        />
-                    </Link>
-                    <Link to="/issues/2">
-                        <Blogcard
-                            image={reactHooks}
-                            title="An intro to React Hooks"
-                            description="The closest thing to fishing React will get."
-                            date="today"
-                            issue="Issue #02"
-                        />
-                    </Link>
-                    <Link to="/issues/1">
-                        <Blogcard
-                            image={introduction}
-                            title="Welcome to my Blog!"
-                            description="A quick intro into the purpose of these posts."
-                            date="June 19 2020"
-                            issue="Issue #01"
-                        />
-                    </Link>
+            <div className={window.innerWidth > 760 ? "center" : "container"} style={{marginBottom: '100px'}}>
+                <div className="container" style={{ paddingTop: '100px'}}>
+                    <h1 className="collection-title">The Full Collection of My Personal Blog Posts</h1>
+                    <hr style={{borderTop: '2px solid #b4b4b4', marginTop: '5px'}}/>
                 </div>
+                <Link to="/issues/3">
+                    <Blogcard
+                        image={djangoUnchained}
+                        title="Building a Web Application with Django"
+                        tags={this.state.tag3}
+                        date=""
+                        issue="Issue #03"
+                    />
+                </Link>
+                <Link to="/issues/2">
+                    <Blogcard
+                        image={reactHooks}
+                        title="An intro to React Hooks"
+                        tags={this.state.tag2}
+                        date="June 19 2020 &#128218; &#128218; 10 min read"
+                        issue="Issue #02"
+                    />
+                </Link>
+                <Link to="/issues/1">
+                    <Blogcard
+                        image={introduction}
+                        title="Welcome to my Blog!"
+                        tags={this.state.tag1}
+                        date="June 19 2020 &#128218; 2 min read"
+                        issue="Issue #01"
+                    />
+                </Link>
             </div>
         )
     }
