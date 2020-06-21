@@ -42,7 +42,7 @@ class Blog extends React.Component {
                         image={djangoUnchained}
                         title="Building a Web Application with Django"
                         tags={this.state.tag3}
-                        date=""
+                        date="June 20 2020 &#128218; &#128218; &#128218; 20 min read"
                         issue="Issue #03"
                     />
                 </Link>
