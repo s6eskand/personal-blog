@@ -1,112 +1,189 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import {Link} from "react-router-dom";
+import '../views/posts/PostHeader.css'
+
+// Material UI
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { blue } from '@material-ui/core/colors'
+import {
+    ExpansionPanel,
+    ExpansionPanelDetails,
+    ExpansionPanelSummary,
+    Typography,
+    FormControlLabel,
+    Checkbox
+} from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 // components
 import Blogcard from '../components/Blogcard';
 import MobileCard from "../components/MobileCard";
 
-// Images
-import introduction from '../media/images/introduction.png';
-import djangoUnchained from '../media/images/django_django_unchained.png';
-import reactHooks from '../media/images/react_hooks.png';
+// icons
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-// TODO add tags to previews
-class Blog extends React.Component {
+// images
+import samProfile from "../media/images/blog_profile.png";
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            tags: [
-                'General',
-                'React',
-                'Hooks',
-                'JavaScript',
-                'Django',
-                'Python'
-            ],
-            tag1: ['general'],
-            tag2: ['React', 'Hooks', 'JavaScript'],
-            tag3: ['Django', 'Python']
-        }
-    }
+// constants
+import {
+    TAGS,
+} from "../constants/filters";
 
-    render() {
-        if (window.innerWidth > 760) {
-            return (
-                <div className="center" style={{marginBottom: '100px'}}>
-                    <div className="container" style={{paddingTop: '100px'}}>
-                        <h1 className="collection-title">The Full Collection of My Personal Blog Posts</h1>
-                        <hr style={{borderTop: '2px solid #b4b4b4', marginTop: '5px'}}/>
+import { routes } from "../constants/posts";
+
+const tags = {
+    display: 'flex',
+    flexWrap: 'wrap'
+};
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        width: 700,
+        margin: 'auto',
+        marginTop: 50,
+        height: 'auto',
+        background: '#f1f1f1'
+    },
+    rootMobile: {
+        width: 345,
+        margin: 'auto',
+        marginTop: 50,
+        height: 'auto',
+        background: '#f1f1f1'
+    },
+    heading: {
+        fontSize: theme.typography.pxToRem(15),
+        flexBasis: '33.33%',
+        flexShrink: 0,
+    },
+    secondaryHeading: {
+        fontSize: theme.typography.pxToRem(15),
+        color: theme.palette.text.secondary,
+    },
+}));
+
+const BlueCheckbox = withStyles({
+    root: {
+        color: blue[200],
+        '&$checked': {
+            color: blue[400],
+        },
+    },
+    checked: {},
+})((props) => <Checkbox color="default" {...props} />);
+
+function Blog(props) {
+
+    const classes = useStyles();
+    const [width, setWidth] = useState(window.innerWidth);
+    const [expanded, setExpanded] = useState(false);
+    const [keys, setKeys] = useState([]);
+    const [checked, setChecked] = useState({
+        General: false,
+        React: false,
+        Hooks: false,
+        JavaScript: false,
+        Django: false,
+        Python: false,
+    });
+
+    const handleChange = (panel) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panel : false);
+    };
+
+    const handleCheck = (event) => {
+        setChecked({ ...checked, [event.target.name]: event.target.checked });
+        const key = event.target.name;
+        keys.includes(key) ?
+            setKeys(keys.filter(tag => tag !== key))
+            : setKeys([...keys, key]);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', getWidth)
+    });
+
+    const getWidth = () => {
+        setWidth(window.innerWidth)
+    };
+
+    const checkFilters = (component) => {
+        let show = true;
+        keys.map(key => {
+            show = !component.tags.includes(key) && checked[key] ? false : show
+        });
+        return show
+    };
+
+    return (
+        <div className="center" style={{marginBottom: '100px'}}>
+            <div className="container" style={{paddingTop: '100px'}}>
+                <h1 className="posts-title">Learn With Me, A(nother) Tech Blog</h1>
+                <div className="author-info">
+                    <img className="author-img" src={samProfile} alt=""/>
+                    <div className="info-text">
+                        <p><b>Personal Blog for <a href="https://github.com/s6eskand" style={{textDecoration: 'underline', color: 'rgb(98, 132, 149)'}}>Sam Eskandar</a></b>
+                            <br/>
+                            Explaining concepts through projects
+                        </p>
                     </div>
-                    <Link to="/issues/3">
-                        <Blogcard
-                            image={djangoUnchained}
-                            title="Building a Web Application with Django"
-                            tags={this.state.tag3}
-                            date="June 20 2020 &#128218; &#128218; &#128218; 20 min read"
-                            issue="Issue #03"
-                        />
-                    </Link>
-                    <Link to="/issues/2">
-                        <Blogcard
-                            image={reactHooks}
-                            title="An intro to React Hooks"
-                            tags={this.state.tag2}
-                            date="June 19 2020 &#128218; &#128218; 10 min read"
-                            issue="Issue #02"
-                        />
-                    </Link>
-                    <Link to="/about">
-                        <Blogcard
-                            image={introduction}
-                            title="Welcome to my Blog!"
-                            tags={this.state.tag1}
-                            date="June 19 2020 &#128218; 1 min read"
-                            issue="Issue #02"
-                        />
-                    </Link>
+                    <div className="social-icons container">
+                        <a href="https://github.com/s6eskand"><FaGithub id="github" size={30} /></a>
+                        <a href="https://linkedin.com/in/sameskandar"><FaLinkedin id="linkedin" size={30} /></a>
+                    </div>
                 </div>
-            )
-        } else {
-            return(
-                <div>
-                    <div className="container" style={{paddingTop: '100px'}}>
-                        <h1 className="collection-title">The Full Collection of My Personal Blog Posts</h1>
-                        <hr style={{borderTop: '2px solid #b4b4b4', marginTop: '5px'}}/>
-                    </div>
-                    <div>
-                        <Link to="/issues/3">
-                            <MobileCard
-                                image={djangoUnchained}
-                                title="Building a Web Application with Django"
-                                tags={this.state.tag3}
-                                date="June 20 2020 &#128218; &#128218; &#128218; 20 min read"
-                                issue="Issue #03"
-                            />
-                        </Link>
-                        <Link to="/issues/2">
-                            <MobileCard
-                                image={reactHooks}
-                                title="An intro to React Hooks"
-                                tags={this.state.tag2}
-                                date="June 19 2020 &#128218; &#128218; 10 min read"
-                                issue="Issue #02"
-                            />
-                        </Link>
-                        <Link to="/about">
-                            <MobileCard
-                                image={introduction}
-                                title="Welcome to my Blog!"
-                                tags={this.state.tag1}
-                                date="June 19 2020 &#128218; 1 min read"
-                                issue="Issue #02"
-                            />
-                        </Link>
-                    </div>
-                </div>
-            )
-        }
-    }
+            </div>
+            <div className={width > 760 ? classes.root : classes.rootMobile}>
+                <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1bh-content"
+                        id="panel1bh-header"
+                    >
+                        <Typography className={classes.heading}>Filter Settings</Typography>
+                        <Typography className={classes.secondaryHeading}>Set Filters to see Posts Related to what you are Looking for.</Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <div style={tags}>
+                            { TAGS.map(tag =>
+                                <FormControlLabel
+                                    control={<BlueCheckbox checked={checked.tag} onChange={handleCheck} name={tag}/>}
+                                    label={tag}
+                                />
+                            )
+                            }
+                        </div>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+            </div>
+            {
+                routes.map((route) =>
+                    checkFilters(route) ?
+                        width > 760 ?
+                            <Link to={route.path}><Blogcard
+                                image={route.image}
+                                title={route.title}
+                                description={route.description}
+                                tags={route.tags}
+                                date={route.date}
+                                time={route.time}
+                                books={route.books}
+                            /></Link> :
+                            <Link to={route.path}><MobileCard
+                                image={route.image}
+                                title={route.title}
+                                description={route.description}
+                                tags={route.tags}
+                                date={route.date}
+                                time={route.time}
+                                books={route.books}
+                            /></Link> :
+                    null)
+                    }
+        </div>
+    )
 }
 
 export default Blog;
