@@ -69,7 +69,7 @@ function Post2() {
                             </div>
                         </p>
                         <p className="table">
-                            <Link to="Conclusion" smooth={true} duration={2000} offset={-70}>2. Conclusion</Link>
+                            <Link to="Conclusion" smooth={true} duration={2000} offset={-70}>3. Conclusion</Link>
                         </p><br/>
                         <br/>
                         <br/>
