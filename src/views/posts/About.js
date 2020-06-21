@@ -8,7 +8,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import samProfile from '../../media/images/blog_profile.png';
 import intro from '../../media/images/introduction.png';
 
-function Post1() {
+function About() {
         return (
             <div className="posts-container">
                 <div className="posts-header">
@@ -55,4 +55,4 @@ function Post1() {
         );
 }
 
-export default Post1;
+export default About;
