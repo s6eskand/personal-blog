@@ -1,9 +1,3 @@
 .collection-title {
     text-align: center;
 }
-
-.blogcard-all {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}

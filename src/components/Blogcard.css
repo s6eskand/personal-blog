@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
+.blogcard-all {
+    padding-top: 50px;
+}
+
 .blogcard {
     background: #f1f1f1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -44,6 +48,11 @@
 .blogcard-profile {
     border-radius: 50%;
     height: 50px;
+    padding: 20px;
+}
+
+.blogcard-issue {
+    padding-top: 27px
 }
 
 @media screen and (max-width: 760px) {
@@ -61,5 +70,10 @@
     .blogcard {
         max-width: 100%;
         min-width: auto;
+    }
+
+    .image-container {
+        padding-left: 25px;
+        padding-right: 25px
     }
 }
