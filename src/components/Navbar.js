@@ -19,7 +19,7 @@ class Navbar extends React.Component {
                 </div>
                 <ul className="nav-links">
                     <a href="https://sameskandar.me"><li>Website</li></a>
-                    <li>Filters</li>
+                    <Link to="/about"><li>About</li></Link>
                 </ul>
             </nav>
         );
