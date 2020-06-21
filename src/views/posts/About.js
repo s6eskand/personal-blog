@@ -24,8 +24,10 @@ function About() {
                             <a href="https://linkedin.com/in/sameskandar"><FaLinkedin id="linkedin" size={30} /></a>
                         </div>
                     </div>
-                    <div className="main-img" >
-                        <img src={intro} alt=""/>
+                    <div className="image-container">
+                        <div className="main-img" >
+                            <img src={intro} alt=""/>
+                        </div>
                     </div>
                     <div className="main-content">
                         <p>

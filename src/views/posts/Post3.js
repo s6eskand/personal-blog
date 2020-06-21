@@ -36,8 +36,10 @@ function Post3() {
                         <a href="https://linkedin.com/in/sameskandar"><FaLinkedin id="linkedin" size={30} /></a>
                     </div>
                 </div>
-                <div className="main-img" >
-                    <img src={django} alt=""/>
+                <div className="image-container">
+                    <div className="main-img" >
+                        <img src={django} alt=""/>
+                    </div>
                 </div>
                 <div className="main-content">
                     <h2>Django. The Web Framework for Perfectionists with Deadlines. </h2>
@@ -154,8 +156,10 @@ function Post3() {
                         You should now have a project structure that looks something like this, <br/>
                         <br/>
                         <br/>
-                        <div className="main-img">
-                            <img src={startFiles} alt=""/>
+                        <div className="image-container">
+                            <div className="main-img">
+                                <img src={startFiles} alt=""/>
+                            </div>
                         </div> <br/>
                         <br/>
                         You can ignore most of the files here except for three. <code>settings.py</code> is what Django uses to configure
@@ -180,8 +184,10 @@ function Post3() {
                         This will create a 'books' directory inside of our  'django_intro' project. Your file structure should now look something like this, <br/>
                         <br/>
                         <br/>
-                        <div className="main-img">
-                            <img src={appFiles} alt=""/>
+                        <div className="image-container">
+                            <div className="main-img">
+                                <img src={appFiles} alt=""/>
+                            </div>
                         </div> <br/>
                         <br/>
                         <br/>
@@ -201,8 +207,10 @@ function Post3() {
                         Now run <code>python manage.py runserver</code> and navigate to the given URL. If everything has
                         been configured properly, you should be seeing this page, <br/>
                         <br/>
-                        <div className="main-img">
-                            <img src={djangoStartView} alt=""/>
+                        <div>
+                            <div className="main-img">
+                                <img src={djangoStartView} alt=""/>
+                            </div>
                         </div> <br/>
                         <br/>
                         Now that we understand the base Django project structure and some fundamentals, lets build our
@@ -361,8 +369,10 @@ function Post3() {
                         Now running the server will give you a page that looks something like this, <br/>
                         <br/>
                         <br/>
-                        <div className="main-img">
-                            <img src={homeComplete} alt=""/>
+                        <div>
+                            <div className="main-img">
+                                <img src={homeComplete} alt=""/>
+                            </div>
                         </div> <br/>
                         <br/>
                         <br/>
@@ -386,8 +396,10 @@ function Post3() {
                         You should see something like this, <br/>
                         <br/>
                         <br/>
-                        <div className="main-img">
-                            <img src={adminNoDB} alt=""/>
+                        <div>
+                            <div className="main-img">
+                                <img src={adminNoDB} alt=""/>
+                            </div>
                         </div> <br/>
                         <br/>
                         <br/>
@@ -400,8 +412,10 @@ function Post3() {
                         Now if you refresh the page, you should see something like this, <br/>
                         <br/>
                         <br/>
-                        <div className="main-img">
-                            <img src={adminDB} alt=""/>
+                        <div className="image-container">
+                            <div className="main-img">
+                                <img src={adminDB} alt=""/>
+                            </div>
                         </div> <br/>
                         <br/>
                         <br/>
@@ -450,8 +464,10 @@ function Post3() {
                         /books and you will see a page that resembles something like this, <br/>
                         <br/>
                         <br/>
-                        <div className="main-img">
-                            <img src={listView} alt=""/>
+                        <div className="image-container">
+                            <div className="main-img">
+                                <img src={listView} alt=""/>
+                            </div>
                         </div> <br/>
                         <br/>
                         <br/>

@@ -30,8 +30,10 @@ function Post2() {
                         <a href="https://linkedin.com/in/sameskandar"><FaLinkedin id="linkedin" size={30} /></a>
                     </div>
                 </div>
-                <div className="main-img" >
-                    <img src={reactHook} alt=""/>
+                <div className="image-container">
+                    <div className="main-img" >
+                        <img src={reactHook} alt=""/>
+                    </div>
                 </div>
                 <div className="main-content">
                     <p>
@@ -249,8 +251,10 @@ function Post2() {
                             If you use the same styles as I do, your application should now look something like this <br/>
                             <br/>
                             <br/>
-                            <div className="main-img">
-                                <img src={project} alt=""/>
+                            <div className="image-container">
+                                <div className="main-img">
+                                    <img src={project} alt=""/>
+                                </div>
                             </div> <br/>
                             <br/>
                             <h2 id="Conclusion">Final Thoughts</h2> <br/>
