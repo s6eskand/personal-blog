@@ -2,8 +2,8 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 // components
-import Featured from '../components/Featured';
 import Blogcard from '../components/Blogcard';
+import MobileCard from "../components/MobileCard";
 
 // Images
 import introduction from '../media/images/introduction.png';
@@ -31,41 +31,81 @@ class Blog extends React.Component {
     }
 
     render() {
-        return(
-            <div className={window.innerWidth > 760 ? "center" : "container"} style={{marginBottom: '100px'}}>
-                <div className="container" style={{ paddingTop: '100px'}}>
-                    <h1 className="collection-title">The Full Collection of My Personal Blog Posts</h1>
-                    <hr style={{borderTop: '2px solid #b4b4b4', marginTop: '5px'}}/>
+        if (window.innerWidth > 760) {
+            return (
+                <div className="center" style={{marginBottom: '100px'}}>
+                    <div className="container" style={{paddingTop: '100px'}}>
+                        <h1 className="collection-title">The Full Collection of My Personal Blog Posts</h1>
+                        <hr style={{borderTop: '2px solid #b4b4b4', marginTop: '5px'}}/>
+                    </div>
+                    <Link to="/issues/3">
+                        <Blogcard
+                            image={djangoUnchained}
+                            title="Building a Web Application with Django"
+                            tags={this.state.tag3}
+                            date="June 20 2020 &#128218; &#128218; &#128218; 20 min read"
+                            issue="Issue #03"
+                        />
+                    </Link>
+                    <Link to="/issues/2">
+                        <Blogcard
+                            image={reactHooks}
+                            title="An intro to React Hooks"
+                            tags={this.state.tag2}
+                            date="June 19 2020 &#128218; &#128218; 10 min read"
+                            issue="Issue #02"
+                        />
+                    </Link>
+                    <Link to="/about">
+                        <Blogcard
+                            image={introduction}
+                            title="Welcome to my Blog!"
+                            tags={this.state.tag1}
+                            date="June 19 2020 &#128218; 1 min read"
+                            issue="Issue #02"
+                        />
+                    </Link>
                 </div>
-                <Link to="/issues/3">
-                    <Blogcard
-                        image={djangoUnchained}
-                        title="Building a Web Application with Django"
-                        tags={this.state.tag3}
-                        date="June 20 2020 &#128218; &#128218; &#128218; 20 min read"
-                        issue="Issue #03"
-                    />
-                </Link>
-                <Link to="/issues/2">
-                    <Blogcard
-                        image={reactHooks}
-                        title="An intro to React Hooks"
-                        tags={this.state.tag2}
-                        date="June 19 2020 &#128218; &#128218; 10 min read"
-                        issue="Issue #02"
-                    />
-                </Link>
-                <Link to="/issues/1">
-                    <Blogcard
-                        image={introduction}
-                        title="Welcome to my Blog!"
-                        tags={this.state.tag1}
-                        date="June 19 2020 &#128218; 2 min read"
-                        issue="Issue #01"
-                    />
-                </Link>
-            </div>
-        )
+            )
+        } else {
+            return(
+                <div>
+                    <div className="container" style={{paddingTop: '100px'}}>
+                        <h1 className="collection-title">The Full Collection of My Personal Blog Posts</h1>
+                        <hr style={{borderTop: '2px solid #b4b4b4', marginTop: '5px'}}/>
+                    </div>
+                    <div>
+                        <Link to="/issues/3">
+                            <MobileCard
+                                image={djangoUnchained}
+                                title="Building a Web Application with Django"
+                                tags={this.state.tag3}
+                                date="June 20 2020 &#128218; &#128218; &#128218; 20 min read"
+                                issue="Issue #03"
+                            />
+                        </Link>
+                        <Link to="/issues/2">
+                            <MobileCard
+                                image={reactHooks}
+                                title="An intro to React Hooks"
+                                tags={this.state.tag2}
+                                date="June 19 2020 &#128218; &#128218; 10 min read"
+                                issue="Issue #02"
+                            />
+                        </Link>
+                        <Link to="/about">
+                            <MobileCard
+                                image={introduction}
+                                title="Welcome to my Blog!"
+                                tags={this.state.tag1}
+                                date="June 19 2020 &#128218; 1 min read"
+                                issue="Issue #02"
+                            />
+                        </Link>
+                    </div>
+                </div>
+            )
+        }
     }
 }
 
