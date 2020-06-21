@@ -17,7 +17,7 @@ function About() {
                         <img className="author-img" src={samProfile} alt=""/>
                         <div className="info-text">
                             <p><b>Written by: Sam Eskandar</b></p>
-                            <p><i>June 19 2020 </i><span role="img" aria-label="books">&#128218;</span><i> 2 min read</i></p>
+                            <p><i>June 19 2020 </i><span role="img" aria-label="books">&#128218;</span><i> 1 min read</i></p>
                         </div>
                         <div className="social-icons">
                             <a href="https://github.com/s6eskand"><FaGithub id="github" size={30} /></a>
