@@ -5,8 +5,8 @@ import Blog from "./views/Blog";
 import Issues from './views/Issues';
 import './App.css';
 
-class App extends React.Component {
-  render() {
+
+function App() {
     return (
       <div>
         <Router>
@@ -18,8 +18,6 @@ class App extends React.Component {
         </Router>
       </div>
     );
-  }
-
 }
 
 export default App;
