@@ -207,7 +207,7 @@ function Post3() {
                         Now run <code>python manage.py runserver</code> and navigate to the given URL. If everything has
                         been configured properly, you should be seeing this page, <br/>
                         <br/>
-                        <div>
+                        <div className="image-container">
                             <div className="main-img">
                                 <img src={djangoStartView} alt=""/>
                             </div>
@@ -369,7 +369,7 @@ function Post3() {
                         Now running the server will give you a page that looks something like this, <br/>
                         <br/>
                         <br/>
-                        <div>
+                        <div className="image-container">
                             <div className="main-img">
                                 <img src={homeComplete} alt=""/>
                             </div>
@@ -396,7 +396,7 @@ function Post3() {
                         You should see something like this, <br/>
                         <br/>
                         <br/>
-                        <div>
+                        <div className="image-container">
                             <div className="main-img">
                                 <img src={adminNoDB} alt=""/>
                             </div>
