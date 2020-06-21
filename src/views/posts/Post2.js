@@ -253,7 +253,7 @@ function Post2() {
                                 <img src={project} alt=""/>
                             </div> <br/>
                             <br/>
-                            <h2>Final Thoughts</h2> <br/>
+                            <h2 id="Conclusion">Final Thoughts</h2> <br/>
                             So that's that, your first mini project using React hooks. Hopefully this tutorial helped you,
                             and gave you some practice using hooks. <br/>
                             <br/>
@@ -267,7 +267,8 @@ function Post2() {
                             If you'd like to see the full project, checkout my repository <a href="https://github.com/s6eskand/learn-with-me">Learn With Me</a> where
                             I post all the completed projects from these tutorials. This specific project can be
                             found <a href="https://github.com/s6eskand/learn-with-me/tree/master/intro-react-hooks-js">here</a>. If this was helpful, star
-                            the repository and be sure to come back soon for more posts and tutorials <span role="img" aria-label="smiling emoji">&#128516;</span>
+                            the repository, share the article, and be sure to come back soon for more posts and
+                            tutorials <span role="img" aria-label="smiling emoji">&#128516;</span>
                         </p>
                     </p>
                 </div>

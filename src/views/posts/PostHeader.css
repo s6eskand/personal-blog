@@ -96,6 +96,11 @@
     font-family: 'Merriweather', serif;
 }
 
+.main-content b {
+    font-size: 18px;
+    font-family: 'Merriweather', serif;
+}
+
 .table {
     display: flex;
     flex-direction: column;
