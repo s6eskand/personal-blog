@@ -10,8 +10,8 @@ class Issues extends React.Component {
         return (
             <div>
                 <Route exact path="/about" component={About} />
-                <Route exact path="/issues/2" component={Post2} />
-                <Route exact path="/issues/3" component={Post3} />
+                <Route exact path="/intro-to-hooks-js" component={Post2} />
+                <Route exact path="/intro-to-django" component={Post3} />
             </div>
         );
     }
