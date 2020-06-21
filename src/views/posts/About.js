@@ -43,7 +43,7 @@ function Post1() {
                             <br/>
                             <br/>
                             With every tutorial/article on this blog, will be a link to the fully documented (yay commenting!) and completed project.
-                            These projects will all be in one repository on my Github account that can be found <a style={{textDecoration: 'underline'}} href="https://github.com/s6eskand/learn-with-me">here</a>. <br/>
+                            These projects will all be in one repository on my Github account that can be found <a href="https://github.com/s6eskand/learn-with-me">here</a>. <br/>
                             <br/>
                             <br/>
                             So feel free to star the repo, use it as reference, or just copy and paste some of the boilerplate code needed to complete the project. I hope that I can help as much as possible with
