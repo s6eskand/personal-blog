@@ -300,7 +300,7 @@ function Post3() {
                         <b id="booktemplates">Creating the Home Page</b> <br/>
                         <br/>
                         Before we can start making our Home page, we have to understand how Django renders Templates. As explained earlier,
-                        Django runs on the MTV concept, where each Template is its own view (HTML file) that gets rendered by a specific View.
+                        Django runs on the MTV concept, where each Template is its own view (HTML file) that gets rendered by a specific Django view.
                         We'll get back to rendering views later, but for now lets configure our Templates within our <code>settings.py</code> file. <br/>
                         <br/>
                         <br/>
@@ -315,7 +315,7 @@ function Post3() {
                         <Gist id="cfe486b28f8ce7f3e95495eacba03f93" /> <br/>
                         <br/>
                         This is great! We have our Template made, but we haven't given Django any instructions on how to display it.
-                        This will be solved using views. <br/>
+                        This will be solved using Django views. <br/>
                         <br/>
                         <br/>
                         Navigate to your <code>views.py</code> file, and add the following to the file, <br/>
@@ -341,8 +341,8 @@ function Post3() {
                         Django method <code>path()</code> where the first argument is the relative path, the second is the view to
                         be rendered, and the last is the name of the path. <br/>
                         <br/>
-                        <b>Note:</b> The name of the path is NOT the same as the relative path, if
-                        you set your relative path to '' and name to 'home', the path will be https://localhost:8000 NOT https://localhost:8000/home <br/>
+                        <b>Note:</b> The name of the path is NOT the same as the relative path. If
+                        you set your relative path to '' and name to 'home', the path will be http://localhost:8000 NOT http://localhost:8000/home <br/>
                         <br/>
                         <br/>
                         We are not done yet. Now we know how to create a View that renders a Template, mapped to a specific URL in our app,
@@ -392,7 +392,7 @@ function Post3() {
                         <br/>
                         <code>python manage.py createsuperuser</code> <br/>
                         <br/>
-                        You will be prompted to make an account. Once you have successfully done so, navigate to /admin and log in.
+                        You will be prompted to make an account. Once you have successfully done so, navigate to <code>/admin</code> and log in.
                         You should see something like this, <br/>
                         <br/>
                         <br/>
@@ -403,13 +403,16 @@ function Post3() {
                         </div> <br/>
                         <br/>
                         <br/>
+                        What Django just did for us was make an admin account that is granted all permissions. You can now
+                        create, read, update, and delete any data in the Database, as well as manage user permissions.
                         This is awesome, we now have our own Admin Dashboard. However, we need to register our Models to see
                         them on the Admin page. This can be done by adding the following lines to your <code>admin.py</code> file, <br/>
                         <br/>
                         <code>from .models import Book</code> <br/>
                         <code>admin.site.register(Book)</code> <br/>
                         <br/>
-                        Now if you refresh the page, you should see something like this, <br/>
+                        What those two lines of code did for us was tell Django that we want to see all the data in
+                        our <code>Books</code> table on the Admin Dashboard. Now if you refresh the page, you should see something like this, <br/>
                         <br/>
                         <br/>
                         <div className="image-container">
@@ -420,13 +423,13 @@ function Post3() {
                         <br/>
                         <br/>
                         Before we start adding logic to our views to display all the content in our Database, let's bootstrap
-                        some data into our Database through the Admin Dashboard. To do this, navigate to the /admin/books/book/add page
+                        some data into our Database through the Admin Dashboard. To do this, navigate to the <code>/admin/books/book/add</code> page
                         and fill out the data with any 3 books you like. If you're not sure how to send an image as a string, just right click an
                         image, and hit copy image address. Pasting that will paste a string containing the image content. <br/>
                         <br/>
                         <br/>
                         Now that your <code>Book</code> Model has been registered, your Admin page will refresh to display the changes and we can now
-                        add logic in our Views to display the content of our Database! <br/>
+                        add logic in our Django views to display the content of our Database! <br/>
                         <br/>
                         <br/>
                         <b id="bookviews">Adding Logic to Views</b> <br/>
@@ -438,9 +441,9 @@ function Post3() {
                         <br/>
                         <Gist id="e969824d6937204c11879f6c04a4f07b" /> <br/>
                         <br/>
-                        We start by containing all the Book objects from our Database into a variable called <code>all_books</code>.
+                        We start by containing all the <code>Book</code> objects from our Database into a variable called <code>all_books</code>.
                         This allows us to create a Python dictionary called <code>frontend_exports</code> that we return
-                        within the <code>render()</code> method. What this does is allow us to access all the <code>Book</code> objects
+                        within the <code>render()</code> method. What this does is give us access to all the <code>Book</code> objects
                         from the UI through a list called <code>books</code>. Now we need to make the actual template for our <code>books</code> view. Create a file
                         called <code>books.html</code> within the templates directory and add the following, <br/>
                         <br/>
@@ -461,7 +464,7 @@ function Post3() {
                         <br/>
                         <br/>
                         Once you add your new view to your <code>urlpatterns</code> in <code>books/urls.py</code>, navigate to
-                        /books and you will see a page that resembles something like this, <br/>
+                        <code>/books</code> and you will see a page that resembles something like this, <br/>
                         <br/>
                         <br/>
                         <div className="image-container">
@@ -475,11 +478,10 @@ function Post3() {
                         <br/>
                         <br/>
                         This requires us to create a new view called <code>add_book</code> in our <code>views.py</code> file.
-                        However, before we can do that, let's update our models.py file. Being as amazing as it is,
+                        However, before we can do that, let's update our models.py file. Being the amazing framework it is,
                         Django provides built in Classes for Form submissions. This means that instead of targeting every
                         single value of the POST request and creating a new instance of the <code>Book</code> class,
-                        we can just create an instance of the <code>BookForm</code> class containing all the POST data,
-                        save it as an instance of the <code>Book</code> class, and save the final object to the Database.
+                        we can just create an instance of the <code>BookForm</code> class containing all the POST data.
                         To get this setup we have to create the form template. Create a file called <code>form.html</code> in
                         the templates directory, and add the following,<br/>
                         <br/>
@@ -522,7 +524,7 @@ function Post3() {
                     <p>
                         If you have made it to this point, I thank you. This article was on the longer side of the posts
                         I would usually make, but there is a lot to go through to build a Django Application without glossing
-                        over important fundamentals. Hopefully you can apply the fundamentals learned today to your own applications,
+                        over important fundamentals. Hopefully you can apply the concepts learned today to your own applications,
                         and now have a greater appreciation for the absolutely amazing framework that is Django. <br/>
                         <br/>
                         <br/>

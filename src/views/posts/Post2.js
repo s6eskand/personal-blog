@@ -134,7 +134,8 @@ function Post2() {
                             <br/>
                             <p>
                                 This time we are making use of the <code>useEffect()</code> hook which can replace
-                                the <code>componentDidMount()</code> lifecycle method we would use in a Component class. <br/>
+                                the <code>componentDidMount()</code>, <code>componentDidUpdate()</code>,
+                                and <code>componentWillUnmount()</code> lifecycle methods we would use in a class Component. <br/>
                                 <br/>
                                 <br/>
                                 In this context the word can is very important. Simply speaking, the reason why the <code>useEffect()</code> hook
@@ -149,7 +150,7 @@ function Post2() {
                                 the <code>useState()</code> hook. <br/>
                                 <br/>
                                 <br/>
-                                The <code>useEffect()</code> hook accepts to parameters, a function, and an optional empty array.
+                                The <code>useEffect()</code> hook accepts two parameters, a function, and an optional empty array.
                                 The function we define within the hook will be what executes our task (in this case fetching a random
                                 dog photo), and the empty array signifies that the <code>useEffect()</code> hook should only run after
                                 the initial render of the page. By default, the <code>useEffect()</code> hook fires after
@@ -157,6 +158,9 @@ function Post2() {
                                 and <code>componentWillUnmount()</code> lifecycle methods all into one. In this example, we only want
                                 to load the image on the initial mount, so we add the empty array as a second parameter to prevent
                                 unwanted updates.<br/>
+                                <br/>
+                                <br/>
+                                <b>Note:</b> Try removing the array in the <code>useEffect()</code> hook and see how the data changes. <br/>
                                 <br/>
                                 <br/>
                             </p>
@@ -177,7 +181,7 @@ function Post2() {
                         <p>
                             By comparing the two ways to write this component, the benefits of using hooks are evident.
                             By using hooks you have made the code not only easier to read and understand, but shortened the amount of time
-                            it would take to develop the component. <br/>
+                            it would take to develop. <br/>
                             <br/>
                             <br/>
                             Now let's take those simple concepts and apply them to a larger scale project. <br/>
@@ -218,7 +222,7 @@ function Post2() {
                             a presentable frontend using Semantic UI (because React is a UI framework in the end).
                             In this tutorial we'll be using the pre built css themes from Semantic UI, if you would like to
                             customize your frontend, no need to use Semantic UI at all, but for this tutorial we'll be importing
-                            the minified css file <code>import 'semantic-ui-css/semantic.min.css';</code> in our App.js file<br/>
+                            the minified css file <code>import 'semantic-ui-css/semantic.min.css';</code> in our <code>App.js</code> file<br/>
                             <br/>
                             <br/>
                             Next, create a directory called <code>components</code> and create a JavaScript file
@@ -241,7 +245,7 @@ function Post2() {
                             <br/>
                             The next step is to make the API call in our <code>ListMovies.js</code> file. To do this we'll be using the API given to us by our good friends
                             at <a href="https://ghibliapi.herokuapp.com/">the Studio Ghibli API</a>. The way this will be done is by creating
-                            a state variable called 'movies' that we will update using the <code>useState()</code> hook. The API call itself
+                            a state variable called <code>movies</code> that we will update using the <code>useState()</code> hook. The API call itself
                             will be done using the <code>useEffect()</code> hook, and the contents of the request will be mapped onto
                             the Cards we have already built to be displayed in an organized manner. Your <code>ListMovies</code> Component should
                             now look something like this <br/>
@@ -263,8 +267,8 @@ function Post2() {
                             <br/>
                             <br/>
                             Hooks are a great way to write React Components,
-                            however, they are completely optional, and React has no plans on removing them from the framework.
-                            So if you are hesitant to refactor from Classes to Functions (as I was at first), there is no
+                            however, they are completely optional, and React has no plans on removing class based Components from the framework.
+                            So if you are hesitant to refactor from classes to functions (as I was at first), there is no
                             need to stress.
                             <br/>
                             <br/>
