@@ -21,6 +21,23 @@ const useStyles = makeStyles({
 function MobileCard(props) {
     const classes = useStyles();
 
+    const renderBooks = () => {
+        switch (props.books) {
+            case 1:
+                return <span role="img" aria-label="books">&#128218;</span>;
+            case 2:
+                return <span role="img" aria-label="books">&#128218; &#128218;</span>;
+            case 3:
+                return <span role="img" aria-label="books">&#128218; &#128218; &#128218;</span>;
+            case 4:
+                return <span role="img" aria-label="books">&#128218; &#128218; &#128218; &#128218;</span>;
+            case 5:
+                return <span role="img" aria-label="books">&#128218; &#128218; &#128218; &#128218; &#128218;</span>;
+            default:
+                return <span role="img" aria-label="books">&#128218;</span>;
+        }
+    };
+
     return (
         <Card className={classes.root}>
             <CardActionArea>
@@ -34,7 +51,7 @@ function MobileCard(props) {
                         {props.title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        {props.date}
+                        {props.date} {renderBooks()} {props.time}
                     </Typography>
                 </CardContent>
             </CardActionArea>
