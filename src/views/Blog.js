@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import {Link} from "react-router-dom";
 import '../views/posts/PostHeader.css'
+import './Blog.css'
 
 // Material UI
 import { makeStyles, withStyles } from '@material-ui/core/styles';
@@ -24,7 +25,6 @@ import MobileCard from "../components/MobileCard";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // images
-import samProfile from "../media/images/blog_profile.png";
 
 // constants
 import {
@@ -122,8 +122,8 @@ function Blog(props) {
             <div className="container" style={{paddingTop: '100px'}}>
                 <h1 className="posts-title">Learn With Me, A(nother) Tech Blog</h1>
                 <div className="author-info">
-                    <img className="author-img" src={samProfile} alt=""/>
-                    <div className="info-text">
+                    <img className="author-img" src="https://avatars3.githubusercontent.com/u/53276111?s=460&u=20f828d7613af24665772cd71f864427b0ee21c1&v=4" alt=""/>
+                    <div className="info-header-text">
                         <p><b>Personal Blog for <a href="https://github.com/s6eskand" style={{textDecoration: 'underline', color: 'rgb(98, 132, 149)'}}>Sam Eskandar</a></b>
                             <br/>
                             Explaining concepts through projects

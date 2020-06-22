@@ -7,7 +7,6 @@ import { Link } from 'react-scroll';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // images
-import samProfile from '../../media/images/blog_profile.png';
 import reactHook from '../../media/images/react_hooks.png';
 import project from '../../media/images/react-hooks-project.png';
 
@@ -17,7 +16,7 @@ function Post2() {
             <div className="posts-header">
                 <h1 className="posts-title">An Intro to React Hooks</h1>
                 <div className="author-info">
-                    <img className="author-img" src={samProfile} alt=""/>
+                    <img className="author-img" src="https://avatars3.githubusercontent.com/u/53276111?s=460&u=20f828d7613af24665772cd71f864427b0ee21c1&v=4" alt=""/>
                     <div className="info-text">
                         <p><b>Written by: Sam Eskandar</b></p>
                         <div className="info-specific">

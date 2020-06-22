@@ -5,7 +5,6 @@ import './PostHeader.css';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // images
-import samProfile from '../../media/images/blog_profile.png';
 import intro from '../../media/images/introduction.png';
 
 function About() {
@@ -14,7 +13,7 @@ function About() {
                 <div className="posts-header">
                     <h1 className="posts-title">Welcome to my Blog!</h1>
                     <div className="author-info">
-                        <img className="author-img" src={samProfile} alt=""/>
+                        <img className="author-img" src="https://avatars3.githubusercontent.com/u/53276111?s=460&u=20f828d7613af24665772cd71f864427b0ee21c1&v=4" alt=""/>
                         <div className="info-text">
                             <p><b>Written by: Sam Eskandar</b></p>
                             <p><i>June 19 2020 </i><span role="img" aria-label="books">&#128218;</span><i> 1 min read</i></p>
