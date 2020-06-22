@@ -220,7 +220,7 @@ function Post3() {
                         <b>Note:</b> Django runs by default on port 8000, you can change this by running the
                         command <br/>
                         <br/>
-                        <code>python manage.py &lt;port_number&gt;</code> <br/>
+                        <code>python manage.py runserver &lt;port_number&gt;</code> <br/>
                         <br/>So if you want to run on port 8080 <br/>
                         <br/><code>python manage.py runserver 8080</code> <br/>
                         <br/>
