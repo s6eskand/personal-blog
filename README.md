@@ -7,6 +7,4 @@ The blog can be found [here](https://samtechblog.netlify.app) and will be update
 All tutorial projects in each post can be found in my [Learn With Me](https://github.com/s6eskand/learn-with-me) Repository.
 If you find that repository useful, star it, and use it for future reference.
 
-Also features my favourite post of the week.
-
 Hope you enjoy and visit the blog often! :smile:
