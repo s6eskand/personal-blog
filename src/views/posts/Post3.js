@@ -4,7 +4,7 @@ import Gist from "react-gist";
 import {Link} from "react-scroll";
 
 // icons
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 // images
 import django from '../../media/images/django_django_unchained.png';
@@ -33,6 +33,7 @@ function Post3() {
                     <div className="social-icons">
                         <a href="https://github.com/s6eskand"><FaGithub id="github" size={30} /></a>
                         <a href="https://linkedin.com/in/sameskandar"><FaLinkedin id="linkedin" size={30} /></a>
+                        <a href="https://twitter.com/sameskandar22"><FaTwitter id="twitter" size={30} /></a>
                     </div>
                 </div>
                 <div className="image-container">

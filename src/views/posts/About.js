@@ -2,7 +2,7 @@ import React from 'react';
 import './PostHeader.css';
 
 // icons
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 // images
 import intro from '../../media/images/introduction.png';
@@ -21,6 +21,7 @@ function About() {
                         <div className="social-icons">
                             <a href="https://github.com/s6eskand"><FaGithub id="github" size={30} /></a>
                             <a href="https://linkedin.com/in/sameskandar"><FaLinkedin id="linkedin" size={30} /></a>
+                            <a href="https://twitter.com/sameskandar22"><FaTwitter id="twitter" size={30} /></a>
                         </div>
                     </div>
                     <div className="image-container">
@@ -35,8 +36,12 @@ function About() {
                             <br/>
                             I originally had the idea to start a technical blog because I document everything I learn.
                             If you were to go through my Github account you would quickly see that I have a lot of tutorial
-                            projects that I use as reference for when I am building larger scale applications. So, I had the idea
-                            to share those resources. <br/>
+                            projects that I use as reference for when I am building larger scale applications. <br/>
+                            <br/>
+                            <br/>
+                            Additionally, I would not be where I am today were it not for the help of my friends and mentors,
+                            who constantly put in the effort to share their knowledge and expertise with me. It is now my turn to continue that cycle.
+                            Hence the blog. <br/>
                             <br/>
                             <br/>
                             Every single post will be a tutorial on a way to execute a task with a specific language or framework,

@@ -68,6 +68,10 @@
     margin-right: 10px;
 }
 
+#twitter {
+    margin-right: 10px;
+}
+
 .main-content {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -165,10 +169,13 @@
     }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 900px) {
     .social-icons {
         display: none;
     }
+}
+
+@media screen and (max-width: 760px) {
 
     .info-text {
         width: 100%;
