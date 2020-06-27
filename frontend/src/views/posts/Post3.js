@@ -2,6 +2,13 @@ import React from 'react';
 import './PostHeader.css';
 import Gist from "react-gist";
 import {Link} from "react-scroll";
+import axios from 'axios';
+
+// constants
+import {
+    API_KEY,
+    API_SECRET,
+} from "../../constants/twitter";
 
 // icons
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -15,8 +22,10 @@ import homeComplete from '../../media/images/django-home-finished.png';
 import adminNoDB from '../../media/images/admin-books-nodb.png';
 import adminDB from '../../media/images/admin-books-db.png';
 import listView from '../../media/images/django-books-cards.png';
+import {Button} from "@material-ui/core";
 
 function Post3() {
+
     return (
         <div className="posts-container">
             <div className="posts-header">
@@ -534,6 +543,8 @@ function Post3() {
                         the repository, share the article, and be sure to come back soon for more posts and
                         tutorials <span role="img" aria-label="smiling emoji">&#128516;</span>
                     </p>
+                </div>
+                <div className="twitter-contact">
                 </div>
             </div>
         </div>
