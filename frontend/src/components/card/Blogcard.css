@@ -31,7 +31,6 @@
 }
 
 .blogcard-about button {
-    margin-right: 4px;
     background: rgba(172, 230, 255, 0.26);
     font-family: 'Roboto Mono', monospace;
     transform: scale(0.9);
