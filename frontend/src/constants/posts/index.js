@@ -25,7 +25,7 @@ export const routes = [
       title: "An Intro to React and TypeScript",
       description: "React hasn't changed, but dynamically typed components have.",
       tags: TAG3,
-      date: "June 27 2020 ",
+      date: "August 9 2020 ",
       time: " 10 min read",
       books: 2,
       path: "/react-with-typescript",
