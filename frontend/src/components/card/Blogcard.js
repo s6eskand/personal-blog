@@ -1,5 +1,5 @@
 import React from 'react';
-import profilePic from '../media/images/blog_profile.png'
+import profilePic from '../../media/images/blog_profile.png'
 import './Blogcard.css';
 import { Button } from '@material-ui/core';
 

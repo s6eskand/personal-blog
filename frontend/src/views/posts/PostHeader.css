@@ -90,6 +90,12 @@
     font-family: 'Merriweather', serif;
 }
 
+.main-content pre {
+    background: rgba(172, 230, 255, 0.26);
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+}
+
 .main-content code {
     background: rgba(172, 230, 255, 0.26);
     font-size: 16px;

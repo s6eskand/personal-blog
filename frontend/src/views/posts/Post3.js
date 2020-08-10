@@ -2,13 +2,6 @@ import React from 'react';
 import './PostHeader.css';
 import Gist from "react-gist";
 import {Link} from "react-scroll";
-import axios from 'axios';
-
-// constants
-import {
-    API_KEY,
-    API_SECRET,
-} from "../../constants/twitter";
 
 // icons
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -89,7 +82,7 @@ function Post3() {
                         <div className="sub-table">
                             <Link to="mvcdjango" smooth={true} duration={2000} offset={-70}>&bull; MVC vs MTV</Link>
                             <Link to="startdjango" smooth={true} duration={2000} offset={-70}>&bull; Django Project Structure</Link>
-                            <Link to="startappdjango" smoot={true} duration={2000} offset={-70}>&bull; Application Setup and Structure</Link>
+                            <Link to="startappdjango" smooth={true} duration={2000} offset={-70}>&bull; Application Setup and Structure</Link>
                         </div>
                     </p>
                     <p className="table">
@@ -97,9 +90,9 @@ function Post3() {
                         <div className="sub-table">
                             <Link to="djangobookproject" smooth={true} duration={2000} offset={-70}>&bull; Overview</Link>
                             <Link to="bookmodels" smooth={true} duration={2000} offset={-70}>&bull; Creating our Models</Link>
-                            <Link to="booktemplates" smoot={true} duration={2000} offset={-70}>&bull; Creating the Home page</Link>
-                            <Link to="bookadmin" smoot={true} duration={2000} offset={-70}>&bull; Administration Dashboard</Link>
-                            <Link to="bookviews" smoot={true} duration={2000} offset={-70}>&bull; Adding Logic to Views</Link>
+                            <Link to="booktemplates" smooth={true} duration={2000} offset={-70}>&bull; Creating the Home page</Link>
+                            <Link to="bookadmin" smooth={true} duration={2000} offset={-70}>&bull; Administration Dashboard</Link>
+                            <Link to="bookviews" smooth={true} duration={2000} offset={-70}>&bull; Adding Logic to Views</Link>
                         </div>
                     </p>
                     <p className="table">

@@ -58,8 +58,8 @@ function Post2() {
                             <div className="sub-table">
                                 <Link to="useState" smooth={true} duration={2000} offset={-70}>&bull; useState Hook</Link>
                                 <Link to="useEffect" smooth={true} duration={2000} offset={-70}>&bull; useEffect Hook</Link>
-                                <Link to="props" smoot={true} duration={2000} offset={-70}>&bull; Using Props</Link>
-                                <Link to="props" smoot={true} duration={2000} offset={-70}>&bull; Rules of Hooks</Link>
+                                <Link to="props" smooth={true} duration={2000} offset={-70}>&bull; Using Props</Link>
+                                <Link to="props" smooth={true} duration={2000} offset={-70}>&bull; Rules of Hooks</Link>
                             </div>
                         </p>
                         <p className="table">
@@ -67,7 +67,7 @@ function Post2() {
                             <div className="sub-table">
                                 <Link to="project" smooth={true} duration={2000} offset={-70}>&bull; Setup</Link>
                                 <Link to="card" smooth={true} duration={2000} offset={-70}>&bull; Simple Card</Link>
-                                <Link to="list" smoot={true} duration={2000} offset={-70}>&bull; Listing the Movies</Link>
+                                <Link to="list" smooth={true} duration={2000} offset={-70}>&bull; Listing the Movies</Link>
                             </div>
                         </p>
                         <p className="table">

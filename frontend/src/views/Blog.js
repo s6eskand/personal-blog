@@ -18,8 +18,8 @@ import {
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 // components
-import Blogcard from '../components/Blogcard';
-import MobileCard from "../components/MobileCard";
+import Blogcard from '../components/card/Blogcard';
+import MobileCard from "../components/card/MobileCard";
 
 // icons
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
